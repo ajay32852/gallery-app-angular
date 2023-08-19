@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-lg-8 mb-12">
+      <div class="row form-group">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <label class="text-white" for="searchData">Search Image Text</label>
+          <input type="text" id="searchData" [(ngModel)]="searchText" class="form-control" placeholder="Search Image Text" />
+        </div>
+        <div class="col-md-6">
+          <label class="text-white" for="amount">Select Image Size</label>
+          <select class="form-control" name="amount" id="amount" [(ngModel)]="amount">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+            <option value="60">60</option>
+          </select>
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md-12">
+          <input type="submit" value="Search Images" class="btn btn-primary py-2 px-4 text-white" (click)="btnClick()" />
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="images.length > 0">
+    <app-image-result [images]="images"></app-image-result>
+  </div>
+  
+  <div *ngIf="images.length === 0">
+    No Data Found
+  </div>
+  

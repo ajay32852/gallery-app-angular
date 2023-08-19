@@ -1,0 +1,18 @@
+
+  <div class="container-fluid" data-aos="fade" data-aos-delay="500">
+    <div class="row">
+       
+        <div class="col-lg-4" *ngFor="let image of images" >
+            <div class="image-wrap-2">
+                <div class="image-info">
+                    <h2 class="mb-3">{{image.tags}}</h2>
+                     <a [routerLink]="['/viewImage', image.tags]" class="btn btn-outline-white py-2 px-4">More Photos</a>
+                </div>
+                <img src={{image.webformatURL}} alt="Image" class="img-fluid">
+            </div>
+        </div>
+      
+    </div>
+ </div>
+
+

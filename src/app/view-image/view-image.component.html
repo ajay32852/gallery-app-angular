@@ -1,0 +1,16 @@
+<div class="site-section" data-aos="fade">
+    <div class="container-fluid">
+       <div class="row justify-content-center">
+          <div class="col-md-7">
+             <div class="row mb-5">
+                <div class="col-12 ">
+                   <h2 class="site-section-heading text-center">{{ searchText }} Gallery</h2>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="row" id="lightgallery">
+          <app-single-view-image *ngIf="images.length > 0" [images]="images"></app-single-view-image>
+       </div>
+    </div>
+ </div>
